@@ -78,7 +78,7 @@ DefensaDigital/
 
 2. Abre el archivo `index.html` en tu navegador o publica el sitio con GitHub Pages.
 
-🔗 Versión en línea (si se publica):  
+Versión en línea, ya publicado:  
 https://magdaig.github.io/DefensaDigital/
 
 ---
