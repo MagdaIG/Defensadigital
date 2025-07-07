@@ -1,32 +1,42 @@
+// Inicia las animaciones de AOS
 AOS.init();
 
-// Validación de formulario
-$("#formContacto").on("submit", function (e) {
-  e.preventDefault();
-  const nombre = $("#nombre").val().trim();
-  const email = $("#email").val().trim();
-  const mensaje = $("#mensaje").val().trim();
+// Espera a que el DOM esté listo
+$(document).ready(function () {
 
-  if (nombre.length < 3 || !email.includes("@") || mensaje === "") {
-    alert("Por favor completa todos los campos correctamente.");
-    return;
-  }
+  // Validación del formulario de contacto
+  $("#formContacto").on("submit", function (e) {
+    e.preventDefault();
 
-  alert("¡Gracias por tu mensaje!");
-  this.reset();
-});
+    const nombre = $("#nombre").val().trim();
+    const email = $("#email").val().trim();
+    const mensaje = $("#mensaje").val().trim();
 
-// Evaluación del test
-$("#testForm").on("submit", function (e) {
-  e.preventDefault();
-  let puntaje = 0;
-  if ($("input[name='p1']:checked").val() === "no") puntaje++;
-  if ($("input[name='p2']:checked").val() === "no") puntaje++;
-  if ($("input[name='p3']:checked").val() === "si") puntaje++;
+    if (nombre.length < 3 || !email.includes("@") || mensaje === "") {
+      alert("Por favor completa todos los campos correctamente.");
+      return;
+    }
 
-  const resultado = puntaje === 3 ? "¡Excelente! Sabes protegerte." :
-    puntaje === 2 ? "Bien, pero puedes mejorar." :
-      "Atención, revisa los consejos del sitio.";
+    alert("¡Gracias por tu mensaje!");
+    this.reset();
+  });
 
-  $("#resultadoTest").text(resultado);
+  // Evaluación del test
+  $("#testForm").on("submit", function (e) {
+    e.preventDefault();
+
+    let puntaje = 0;
+    if ($("input[name='p1']:checked").val() === "no") puntaje++;
+    if ($("input[name='p2']:checked").val() === "no") puntaje++;
+    if ($("input[name='p3']:checked").val() === "si") puntaje++;
+
+    const resultado = puntaje === 3
+      ? "¡Excelente! Sabes protegerte."
+      : puntaje === 2
+        ? "Bien, pero puedes mejorar."
+        : "Atención, revisa los consejos del sitio.";
+
+    $("#resultadoTest").text(resultado);
+  });
+
 });
