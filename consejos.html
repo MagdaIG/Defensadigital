@@ -68,29 +68,31 @@
 </section>
 
 <!-- Formulario de contacto -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container" data-aos="fade-up">
-    <h3 class="text-center mb-4">¿Necesitas más información?</h3>
-    <form id="formContacto" class="mx-auto" style="max-width: 600px;">
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-      </div>
-      <div class="d-flex flex-column flex-md-row gap-3 mt-4 justify-content-between">
-        <button type="submit" class="btn btn-enviar flex-fill">Enviar</button>
-        <button type="button" class="btn btn-outline-dark flex-fill" data-bs-toggle="modal" data-bs-target="#modalTest">
-          Realizar Test de Seguridad
-        </button>
-      </div>
-    </form>
+    <div class="formulario-contacto mx-auto" style="max-width: 700px;">
+      <h3 class="text-center mb-4 fw-bold">¿Necesitas más información?</h3>
+      <form id="formContacto">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+        </div>
+        <div class="d-flex flex-column flex-md-row gap-3 mt-4 justify-content-between">
+          <button type="submit" class="btn btn-enviar flex-fill">Enviar</button>
+          <button type="button" class="btn btn-outline-dark flex-fill" data-bs-toggle="modal" data-bs-target="#modalTest">
+            Realizar Test de Seguridad
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -133,6 +135,7 @@
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
   <p class="mb-0">&copy; 2025 Defensa Digital. Todos los derechos reservados.</p>
+  <p>Hecho por Magdalena Inalaf G.</p>
 </footer>
 
 <!-- Scripts -->
